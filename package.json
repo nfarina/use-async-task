@@ -1,0 +1,40 @@
+{
+  "name": "use-async-task",
+  "version": "1.0.0",
+  "description": "Precise async tasks for React Hooks",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "watch": "npm run build -- --watch src",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "concurrent",
+    "workers",
+    "rate",
+    "limit",
+    "promises",
+    "async",
+    "iterators"
+  ],
+  "author": "Nick Farina",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
